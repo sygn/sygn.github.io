@@ -62,7 +62,7 @@ As mentioned before we decided to communicate with our Ledger nano S through the
 To get the address we need to open a transport connection to the device and connect to our Ethereum app and pass the wallet BIP32 path. Once connected we can call the `getAddress` function on our wallet.
 
 #### Getting the BIP32 path
-You can get your wallet path with the <a href="" target="_blank">Ledger Live</a> app.
+You can get your wallet path with the <a href="https://www.ledger.com/pages/ledger-live" target="_blank">Ledger Live</a> app.
 
 1. Go to your account in the app
 2. Click on edit account
@@ -85,12 +85,12 @@ To sign a specific transaction we can use the `signTransaction` function provide
 
 ### Signing a raw transaction
 {% highlight JavaScript %}
-export const signTransaction = async (rawTx) => {
+export const signTransaction = (rawTx) => {
   const path = "44'/60'/0'/0/0";
   const transport = await Transport.create();
   const ethApp = new AppEth(transport);
   return ethApp.signTranscation(path, rawTx);
-};
+}; // returns a Promise
 
 // example
 signTransaction("e8018504e3b292008252089428ee52a8f3d6e5d15f8b131996950d7f296c7952872bd72a2487400080").then(result => {
@@ -115,7 +115,7 @@ export const getAccount = async () => {
   return result;
 };
 
-export const signTransaction = async (rawTx) => {
+export const signTransaction = (rawTx) => {
   const path = "44'/60'/0'/0/0";
   const transport = await Transport.create();
   const ethApp = new AppEth(transport);
