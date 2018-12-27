@@ -6,13 +6,14 @@ url: "https://sygn.github.io" # the base hostname & protocol for your site e.g. 
 
 # User settings
 username: Željko Tadić
-user_description: Hi
-user_title: Software Engineer
+user_description: Coder, Football player
+user_title: Full stack software engineer
 email: zeljko.tadic.91@gmail.com
 twitter_username: ztadic91
 github_username:  sygn
 gplus_username:  
-disqus_username: 
+stackoverflow_username: 2472608
+disqus_username: ztadic
 
 # Build settings
 markdown: kramdown
