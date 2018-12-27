@@ -12,6 +12,7 @@ tags:
 categories:
 - Blockchain
 twitter_text: 'Integrate the Nano Ledger S with your web application'
+comments: true
 ---
 
 ##  About the Nano Ledger S
