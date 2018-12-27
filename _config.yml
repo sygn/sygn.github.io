@@ -2,7 +2,7 @@
 title: My Personal Blog
 description: A collection of posts about stuff I read and learned
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://sygn.github.io" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+url: "sygn.github.io" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # User settings
 username: Željko Tadić
