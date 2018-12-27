@@ -3,7 +3,7 @@ layout: post
 title: "Integrate the Nano Ledger S with your web application"
 date: 2018-12-18 05:32:44
 image: '/assets/img/post-image.png'
-description: 'A simple guide to integrate the Nano ledger S with your web application'
+description: 'A simple guide on integratating the Nano ledger S with your web application'
 tags:
 - blockchain 
 - ethereum 
@@ -16,28 +16,28 @@ comments: true
 ---
 
 ##  About the Nano Ledger S
-The Nano ledger S is an offline hardware wallet used for storing cryptocurrencies. It supports most of the different crypto currencies like bitcoin, ethereum and other altcoins. Lately I've been working on a web application for a blockhain based startup. The cool part about the app was that the user would need to sign specific blockchain transactions with their private wallets. A requirement was that the web application needed to support the Nano ledger S for authentication and message signing.
+The Nano ledger S is an offline hardware wallet used for storing cryptocurrencies. It supports most of the different cryptocurrencies like bitcoin, ethereum and other altcoins. Lately, I've been working on a web application for a blockchain based startup. The cool part about the app was that the user would need to sign specific blockchain transactions with their private wallets. A requirement was that the web application needed to support the Nano ledger S for authentication and message signing.
 
-Through this post I will give a simple example how you can set up your application to be able to communicate with a Nano ledger S, get the basic information from the wallet and sign transactions.
+Through this post, I will give a simple example of how you can set up your application to be able to communicate with a Nano ledger S, get the basic information from the wallet and sign transactions.
 
 ##  Communication
 There are different ways how you can set up the communication between the Nano ledger S and your application. 
 Some of them are:
 1. Node - with <a href="https://github.com/node-hid/node-hid" target="_blank">node-hid</a> (via USB)
-2. Browser - using (<a href="https://github.com/grantila/u2f-api" target="_blank">U2F api</a>)
+2. Browser - using (<a href="https://github.com/grantila/u2f-api" target="_blank">U2F API</a>)
 3. Bluetooth
 And several others.
 
-All supported communication options can be found on <a href="https://github.com/LedgerHQ/ledgerjs" target="_blank">Ledger github repo</a>.
+All supported communication options can be found on <a href="https://github.com/LedgerHQ/ledgerjs" target="_blank">Ledger GitHub repo</a>.
 
-In our project we chose the U2F communication as we were going to use the Nano ledger S directly in our web application.
+In our project, we chose the U2F communication as we were going to use the Nano ledger S directly in our web application.
 
 ##  U2F requirements
 U2F itself has its own requirements which are:
 - **U2F browser support enabled on the Ledger nano s**  
   Luckily the Nano Ledger S has that option enabled by default. If you are on another device, please check in the settings where you can enable browser support.    
 - **Your browser needs to support U2F**
-  The latest version of Chrome and Opera already support U2f, for older versions or browser please use an extension.  
+  The latest version of Chrome and Opera already support U2f, for older browser versions please use an extension.  
   <a href="https://caniuse.com/#search=u2f" target="_blank">Check the current browser support for the U2f API</a>
 - **HTTPS is required**
 
@@ -68,7 +68,7 @@ You can get your wallet path with the <a href="https://www.ledger.com/pages/ledg
 1. Go to your account in the app
 2. Click on edit account
 3. Toggle Advanced Logs
-4. In the JSON object you will find your account path in the field `freshAddressPath`.
+4. In the JSON object, you will find your account path under the field `freshAddressPath`.
 
 #### Getting the account
 {% highlight JavaScript %}
